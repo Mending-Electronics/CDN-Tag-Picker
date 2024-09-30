@@ -1,0 +1,102 @@
+libraries = [
+    {
+        "name": "Bootstrap",
+        "website": "https://getbootstrap.com/",
+        "cdnjs": "https://cdnjs.com/libraries/bootstrap",
+        "cdnAssets": {},
+        "jsdelivr": "https://www.jsdelivr.com/package/npm/bootstrap",
+        "jsdelivrAPI": "https://data.jsdelivr.com/v1/package/npm/bootstrap",
+        "jsdelivrAssets": {},
+        "jsdelivrAssetsDirectory": {},
+        "npm": "https://www.npmjs.com/package/bootstrap",
+        "githubRepo": "https://github.com/twbs/bootstrap",
+        "githubAssets": [],
+		"githubMessageAPI": ""
+    },
+    {
+        "name": "Bootstrap-icons",
+        "website": "https://icons.getbootstrap.com/",
+        "cdnjs": "https://cdnjs.com/libraries/bootstrap-icons",
+        "cdnAssets": {},
+        "jsdelivr": "https://www.jsdelivr.com/package/npm/bootstrap-icons",
+        "jsdelivrAPI": "https://data.jsdelivr.com/v1/package/npm/bootstrap-icons",
+        "jsdelivrAssets": {},
+        "jsdelivrAssetsDirectory": {},
+        "npm": "https://www.npmjs.com/package/bootstrap-icons",
+        "githubRepo": "https://github.com/twbs/icons",
+        "githubAssets": [],
+		"githubMessageAPI": ""
+    },
+    {
+        "name": "jquery",
+        "website": "https://jquery.com/",
+        "cdnjs": "https://cdnjs.com/libraries/jquery",
+        "cdnAssets": {},
+        "jsdelivr": "https://www.jsdelivr.com/package/npm/jquery",
+        "jsdelivrAPI": "https://data.jsdelivr.com/v1/package/npm/jquery",
+        "jsdelivrAssets": {},
+        "jsdelivrAssetsDirectory": {},
+        "npm": "https://www.npmjs.com/package/jquery",
+        "githubRepo": "https://github.com/jquery/jquery",
+        "githubAssets": [],
+		"githubMessageAPI": ""
+    },
+    {
+        "name": "vue",
+        "website": "http://vuejs.org/?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library",
+        "cdnjs": "https://cdnjs.com/libraries/vue",
+        "cdnAssets": {},
+        "jsdelivr": "https://www.jsdelivr.com/package/npm/vue",
+        "jsdelivrAPI": "https://data.jsdelivr.com/v1/package/npm/vue",
+        "jsdelivrAssets": {},
+        "jsdelivrAssetsDirectory": {},
+        "npm": "https://cdnjs.com/libraries/vue",
+        "githubRepo": "https://github.com/vuejs/core",
+        "githubAssets": [],
+		"githubMessageAPI": ""
+    },
+    {
+        "name": "axios",
+        "website": "https://axios-http.com/",
+        "cdnjs": "https://cdnjs.com/libraries/axios",
+        "cdnAssets": {},
+        "jsdelivr": "https://www.jsdelivr.com/package/npm/axios",
+        "jsdelivrAPI": "https://data.jsdelivr.com/v1/package/npm/axios",
+        "jsdelivrAssets": {},
+        "jsdelivrAssetsDirectory": {},
+        "npm": "https://www.npmjs.com/package/axios",
+        "githubRepo": "https://github.com/axios/axios",
+        "githubAssets": [],
+		"githubMessageAPI": ""
+    },
+    {
+        "name": "vue-x",
+        "website": "https://vuejs.org/v2/guide/state-management.html#Simple-State-Management-from-Scratch",
+        "cdnjs": "https://cdnjs.com/libraries/vuex",
+        "cdnAssets": {},
+        "jsdelivr": "https://www.jsdelivr.com/package/npm/vuex",
+        "jsdelivrAPI": "https://data.jsdelivr.com/v1/package/npm/vuex",
+        "jsdelivrAssets": {},
+        "jsdelivrAssetsDirectory": {},
+        "npm": "https://www.npmjs.com/package/vuex",
+        "githubRepo": "https://github.com/vuejs/vuex",
+        "githubAssets": [],
+		"githubMessageAPI": ""
+    },
+    {
+        "name": "vue-router",
+        "website": "https://router.vuejs.org/",
+        "cdnjs": "https://cdnjs.com/libraries/vue-router",
+        "cdnAssets": {},
+        "jsdelivr": "https://www.jsdelivr.com/package/npm/vue-router",
+        "jsdelivrAPI": "https://data.jsdelivr.com/v1/package/npm/vue-router",
+        "jsdelivrAssets": {},
+        "jsdelivrAssetsDirectory": {},
+        "npm": "https://www.npmjs.com/package/vue-router",
+        "githubRepo": "https://github.com/vuejs/router",
+        "githubAssets": [],
+		"githubMessageAPI": ""
+    }
+
+
+]

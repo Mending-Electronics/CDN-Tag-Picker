@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CDN API Data</title> 
+  <link rel="icon" type="image/png" href="icon.png">
+  
+    <!-- Bootstrap 5.3.3 local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Bootstrap icons --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+    <!-- Vue JS 3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.3/vue.global.min.js" integrity="sha512-m6zZpdEJSyoi3DfgRI7gMHV0ma2ZR46RX9TLGcboSvyQ2yRoXYW87uVjP3Q0atWKCcrDewdVkSWKiZ9i03bHkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+
+    <!-- Axios --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+
+
+    <style>
+      .accordion-button::after {
+          background-size: 32px;
+          background-color: white;
+          border: #ffffff 1px;
+          padding: 16px;
+          border-radius: 7px;
+      }
+
+      .border-dashed {border-style: dashed;}
+
+
+
+   </style>
+
+
+</head>
+<body class="bg-third">
+
+
+  <nav class="navbar navbar-expand-lg bg-none" data-bs-theme="dark">
+		<div class="container-fluid">
+		  <img src="img/logo/logo.svg" alt="logo" width="auto" height="20" class="d-inline-block align-text-top me-4">
+		  <h5 class="text-body d-inline-block m-b-lg m-t-lg me-5 mt-1" style="font-family: 'Fredoka';">
+			MENDING
+			<span class="text-primary-emphasis fs-5">ELECTRONICS</span>
+		  </h5>
+		  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+		  <span class="navbar-toggler d-xl-none collapsed border-0" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<p class="hamburger mt-2 pt-1 text-light">☰</p>
+		  </span>
+		  <div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav me-auto w-75">
+			  <li class="nav-item">
+				<a class="nav-link active" href="index.html">Home
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link active" href="#">About
+					<span class="visually-hidden">(current)</span>
+				</a>
+			  </li>
+			</ul>
+			<form class="d-flex">
+			  <input class="form-control me-sm-2 w-100" type="search" placeholder="Search">
+			  <button class="btn btn-third text-white my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
+			</form>
+			<ul class="navbar-nav ms-md-auto">
+			  <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+				<div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+				<hr class="d-lg-none my-2 text-white-50">
+			  </li>
+
+
+			  <li class="nav-item dropdown" data-bs-theme="light">
+				<a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme">
+				  <i class="bi bi-circle-half"></i>
+				  <span class="d-lg-none ms-2">Toggle theme</span>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-end">
+				  <li>
+					<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+					  <i class="bi bi-sun-fill"></i><span class="ms-2">Light</span>
+					  <i id="light-toggle-theme-btn-indicator" class="bi bi-check2 ms-2 d-none"></i>
+					</button>
+				  </li>
+				  <li>
+					<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="true">
+					  <i class="bi bi-moon-stars-fill"></i><span class="ms-2">Dark</span>
+					  <i id="dark-toggle-theme-btn-indicator" class="bi bi-check2 ms-2 d-none"></i>
+					</button>
+				  </li>
+				  <li>
+					<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+					  <i class="bi bi-circle-half"></i><span class="ms-2">Auto</span>
+					  <i id="auto-toggle-theme-btn-indicator" class="bi bi-check2 ms-2"></i>
+					</button>
+				  </li>
+				</ul>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	</nav>
+
+
+
+  <div id="app" class="container mt-5">
+
+
+    <div class="container mt-5">
+
+
+      <div class="card card-body bg-third border-secondary border-2 border-dashed text-light">
+        <h2>Implementing Frameworks or Libraries in Front-End Web Development</h2>
+        <p>There are two main ways to add frameworks or libraries to your front-end web development project.</p>
+        <p><strong>Note:</strong> Web browsers can only understand and run JavaScript ES5, CSS3, HTML5, SVG, and JSON.</p>
+        
+        <h3 class="mt-4">First option : Work with the Source Files of the Frameworks / Libraries 🦾</h3>
+        <p>First, you need to install Node.js, which is software that helps manage your project files. Create a Node project folder to store all the necessary source files and your own web project files.</p>
+        <p>Next, use a package manager like "npm" or "yarn" to add the frameworks or libraries to your Node project folder. This process will download the source files from GitHub repositories.</p>
+        <p>However, these source files might be written in languages like TypeScript, Less, Pug, SCSS, SASS, or JavaScript ES6, which web browsers cannot directly understand.</p>
+        <p>These languages make the project more readable, versatile, and maintainable. To use these files, you need to install additional tools called transpilers, preprocessors, and debuggers.</p>
+        <p>For example, you can use Babel to convert TypeScript or JavaScript ES6 to JavaScript ES5, SASS to convert SCSS or SASS files to CSS3, and PUG to generate HTML5.</p>
+        <p>To catch any errors during this process, it's recommended to use a debugger like "Lint". It helps identify errors in your code and during compilation.</p>
+        <p>Keep in mind that the Node project can become quite large, and you will need to recompile the entire project after each code modification.</p>
+        
+        <h3 class="mt-4">Second Option : Using CDN 🚀</h3>
+        <p>Alternatively, you can use a Content Delivery Network (CDN). CDNs host already compiled versions of frameworks or libraries as JavaScript ES5, CSS3, etc.</p>
+        <p>These files are stored on platforms like cdnJS or jsDelivr. Simply copy the CDN HTML tag for the framework or library you want to use and paste it into your HTML file. This way, you can use the framework or library directly without any installation!</p>
+        <p>You can also download and import the compiled frameworks or libraries from the CDN platforms to use them locally on your project.</p>
+      </div>
+
+
+
+
+    <div class="card w-100 bg-third border-info border-dashed border-2 text-light my-4">
+      <div class="card-body">
+        <h5 class="card-title">What is a CDN?</h5>
+        <p>A CDN, or Content Delivery Network, is a system of servers distributed around the world that helps deliver web content to users more efficiently. In web development, CDNs are commonly used to distribute compiled and ready-to-use frameworks or libraries, which can be interpreted by the client’s web browser.</p>
+        <ul class="list-group text-white">
+        <li class="list-group-item text-white"><strong>Faster Loading Times:</strong> CDNs store contents on multiple servers. When someone visits your site, the CDN serves the content from the server closest to them, making the site load faster.</li>
+        <li class="list-group-item text-white"><strong>Reduced Bandwidth Costs:</strong> By caching content and reducing the need to fetch data from the main server, CDNs help lower the amount of data transfer, which can save on hosting costs.</li>
+        <li class="list-group-item text-white"><strong>Increased Availability:</strong> CDNs can handle large amounts of traffic and are designed to be resilient to hardware failures, ensuring your site remains accessible even during high traffic periods.</li>
+        <li class="list-group-item text-white"><strong>Improved Security:</strong> Many CDNs offer additional security features like protection against DDoS attacks and enhanced security certificates.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card w-100 bg-third border-warning border-dashed border-2 text-light my-4">
+      <div class="card-body ">
+        <p>
+          Choosing the right CDN for your web development project involves balancing security, reliability, and the availability of the latest library versions. Here are some considerations:
+        </p>
+        <ul>
+          <li><strong>Security: </strong>Cloudflare (used by cdnjs) is highly secure, offering features like DDoS protection and SSL/TLS encryption. However, security alone shouldn’t be the only factor.</li>
+          <li><strong>Library Updates: </strong>Using the latest versions of libraries is crucial to fix some security issues.</li>
+          <li><strong>Reliability and Performance: </strong>Both cdnjs and jsDelivr are reliable and have global coverage, ensuring fast content delivery.</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+  <div class="position-fixed bottom-0 end-0 m-3" style="display: grid; grid-template-rows: auto auto;">
+
+        
+    <a type="button" class="btn btn-outline-primary bg-white text-primary rounded-circle p-2 mt-1 sticky-btn hover-zoom-in hover-shadow" 
+        style="z-index: 2000; width: 42px;"
+        href="#app">
+        <i class="bi bi-arrow-up text-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-custom-class="fixed-top-popover" data-bs-placement="auto" data-bs-trigger="hover" data-bs-delay="200" data-bs-content="Retourner en haut de la page"></i>
+    </a>
+  </div>
+
+
+
+	<!-- Bootstrap 5.3.3 JS --> 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+
+	<!--  Bootstrap 5 Toggle color mode JS -->
+	<script src="js/color-modes.js"></script>
+
+
+	<!-- DATA JSON-->
+	<!-- <script type="text/javascript" src="libraries.json"></script> -->
+
+	<!-- Import Vue app -->
+	<!-- <script src="app.vue" type="text/javascript"></script> -->
+  
+
+
+
+
+
+</body>
+</html>
+
+
