@@ -286,13 +286,13 @@
 									</button>
 								  </template>
 
-								<template v-else-if="file.name.endsWith('.js')">
-								  <button class="btn btn-sm" @click="copyToClipboard('<script type=\'text/htmlpreview\' src=\'https://cdn.jsdelivr.net/npm/' + lib.name.toLowerCase() + '@' + lib.jsdelivrLastestVersion + '/' + lib.jsdelivrAssetsDirectory + file.name + '\' integrity=\'' + file.hash + '\' crossorigin=\'anonymous\' referrerpolicy=\'no-referrer\'></script>')">
-									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0d6986">
-									  <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"></path>
-									</svg>
-								  </button>
-								</template>
+									<template v-else-if="file.name.endsWith('.js')">
+									  <button class="btn btn-sm" @click="copyToClipboard(`<script type='text/htmlpreview' src='https://cdn.jsdelivr.net/npm/${lib.name.toLowerCase()}@${lib.jsdelivrLastestVersion}/${lib.jsdelivrAssetsDirectory}${file.name}' integrity='${file.hash}' crossorigin='anonymous' referrerpolicy='no-referrer'></script>`)">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0d6986">
+										  <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"></path>
+										</svg>
+									  </button>
+									</template>
 
 
 								  <template v-else>
